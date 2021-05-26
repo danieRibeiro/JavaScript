@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Faixa etaria</title>
+    </head>
+    <body>
+        
+        <label for="idade">Coloque a sua idade: </label>
+        <input type="number" id="idade" value="0" max="100" min="-5">
+        <button type="submit" id='botao'>Enviar</button><br>
+        <span>Classificação:<span id="classifica"></span> </span>
+
+
+        <script>
+
+            (function(){
+
+                let classifica = document.getElementById('classifica');
+                
+                let botao = document.getElementById("botao").addEventListener('click', function(){
+                    
+                    let idade = document.querySelector("#idade").value
+                    let valor = (idade < 0)?"Idade inválida":(idade >= 0 && idade < 15)?"Criança":(idade >= 15 && idade < 30)?"Jovem":(idade >= 30 && idade < 60)?"Adulto":"Idoso"
+                    classifica.innerHTML = ` ${valor}`;
+
+                });
+
+            })();
+            
+            
+            
+
+        </script>
+
+    </body>
+</html>
