@@ -1,6 +1,6 @@
 # Esse é um exercício de integração de uma API do Correio.
 
-### Nesse exercício foi utilizado o Bootstrap e JS.
+### Nesse exercício foi utilizado Bootstrap e JS.
 
 No arquivo index.js houve uma refatoração do código e foi utilizado a Expressão Regular para formatar os valores de entradas no campo CEP.
 
